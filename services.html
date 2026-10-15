@@ -6,6 +6,7 @@
   <meta name="description" content="Explore gentle, vinyasa, restorative, and chair yoga classes, private sessions, and simple pricing at Riverbend Yoga Studio.">
   <title>Classes and Pricing | Riverbend Yoga Studio</title>
   <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
 </head>
 <body>
   <header>
@@ -23,30 +24,61 @@
   <main>
     <h1>Classes and Pricing</h1>
 
-    <section>
+    <section id="class-types">
       <h2>Class Types</h2>
 
-      <article>
+      <div class="class-finder">
+        <h3>Find Your Class</h3>
+        <p>Tell us what you are looking for and we will highlight the classes that fit. Save your favorite and we will remember it when you request a spot.</p>
+
+        <div class="finder-controls">
+          <div class="finder-field">
+            <label for="level-filter">Your experience</label>
+            <select id="level-filter">
+              <option value="any">Any level</option>
+              <option value="new">Brand new to yoga</option>
+              <option value="some">Some experience</option>
+              <option value="regular">Practice regularly</option>
+            </select>
+          </div>
+
+          <div class="finder-field">
+            <span class="finder-label" id="goal-label">Your goal</span>
+            <div class="goal-buttons" role="group" aria-labelledby="goal-label">
+              <button type="button" class="goal-button" data-goal="all" aria-pressed="true">All classes</button>
+              <button type="button" class="goal-button" data-goal="relax" aria-pressed="false">Relax and de-stress</button>
+              <button type="button" class="goal-button" data-goal="strength" aria-pressed="false">Build strength</button>
+              <button type="button" class="goal-button" data-goal="gentle" aria-pressed="false">Easy on the joints</button>
+              <button type="button" class="goal-button" data-goal="quick" aria-pressed="false">Short on time</button>
+            </div>
+          </div>
+        </div>
+
+        <p class="finder-status" id="finder-status" aria-live="polite"></p>
+        <p class="saved-class" id="saved-class" hidden></p>
+      </div>
+
+      <article data-class="gentle">
         <h3>Gentle Flow</h3>
         <p>Slow, supported movement that builds flexibility and balance. Ideal for first-time students and anyone returning to exercise.</p>
       </article>
 
-      <article>
+      <article data-class="vinyasa">
         <h3>Vinyasa</h3>
         <p>A steady, breath-linked flow that builds strength and focus. Options are offered for every pose, so all levels are welcome.</p>
       </article>
 
-      <article>
+      <article data-class="restorative">
         <h3>Restorative</h3>
         <p>Restful poses held with blankets and bolsters to release tension and calm the mind. A great way to end a busy week.</p>
       </article>
 
-      <article>
+      <article data-class="chair">
         <h3>Chair Yoga</h3>
         <p>Seated and standing poses using a chair for support. Designed for older adults and anyone who prefers to stay off the floor.</p>
       </article>
 
-      <article>
+      <article data-class="express">
         <h3>Lunchtime Express Flow</h3>
         <p>A 30-minute class built for busy professionals who want to reset during the workday.</p>
       </article>

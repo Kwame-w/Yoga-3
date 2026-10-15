@@ -6,6 +6,7 @@
   <meta name="description" content="See Riverbend Yoga Studio's monthly workshops and request a spot with our interest form.">
   <title>Workshops and Events | Riverbend Yoga Studio</title>
   <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
 </head>
 <body>
   <header>
@@ -53,18 +54,21 @@
       <h2>Request a Spot</h2>
       <p>Interested in a class or workshop? Fill out this form and we will contact you within two business days. Fields marked with an asterisk (*) are required.</p>
 
-      <form action="#" method="post">
+      <form action="#" method="post" id="request-spot-form" novalidate>
         <fieldset>
           <legend>Your Contact Information</legend>
 
           <label for="name">Full name *</label>
           <input type="text" id="name" name="name" autocomplete="name" required minlength="2" maxlength="60">
+          <p class="error-message" id="name-error" aria-live="polite"></p>
 
           <label for="email">Email address *</label>
           <input type="email" id="email" name="email" autocomplete="email" required placeholder="name@example.com">
+          <p class="error-message" id="email-error" aria-live="polite"></p>
 
           <label for="phone">Phone number (optional)</label>
           <input type="tel" id="phone" name="phone" autocomplete="tel" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="225-555-0142" title="Use the format 225-555-0142">
+          <p class="error-message" id="phone-error" aria-live="polite"></p>
         </fieldset>
 
         <fieldset>
@@ -83,6 +87,8 @@
             <option value="breathing-workshop">Mindful Breathing Workshop</option>
             <option value="chair-workshop">Chair Yoga for Healthy Aging Workshop</option>
           </select>
+          <p class="form-note" id="interest-note" hidden></p>
+          <p class="error-message" id="interest-error" aria-live="polite"></p>
         </fieldset>
 
         <fieldset>
@@ -93,6 +99,7 @@
           <label for="level-some">Some experience</label>
           <input type="radio" id="level-regular" name="experience" value="regular">
           <label for="level-regular">Practice regularly</label>
+          <p class="error-message" id="experience-error" aria-live="polite"></p>
         </fieldset>
 
         <fieldset>
@@ -103,15 +110,19 @@
           <label for="contact-phone">Phone call</label>
           <input type="radio" id="contact-text" name="contact-method" value="text">
           <label for="contact-text">Text message</label>
+          <p class="error-message" id="contact-method-error" aria-live="polite"></p>
         </fieldset>
 
         <fieldset>
           <legend>Your Message</legend>
           <label for="message">Questions, goals, or accessibility needs *</label>
           <textarea id="message" name="message" rows="5" cols="40" required minlength="10" maxlength="500"></textarea>
+          <p class="char-count" id="message-count">0 / 500 characters</p>
+          <p class="error-message" id="message-error" aria-live="polite"></p>
         </fieldset>
 
         <button type="submit">Request a Spot</button>
+        <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
       </form>
     </section>
   </main>
