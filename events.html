@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="See Riverbend Yoga Studio's monthly workshops and request a spot with our interest form.">
+  <title>Workshops and Events | Riverbend Yoga Studio</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <a href="index.html"><img src="yoga-logo_c.png" alt="Riverbend Yoga Studio logo" width="160"></a>
+    <nav aria-label="Main navigation">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="services.html">Classes and Pricing</a></li>
+        <li><a href="about.html">About Our Studio</a></li>
+        <li><a href="events.html">Workshops and Events</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h1>Workshops and Events</h1>
+
+    <section>
+      <h2>Monthly Workshop List</h2>
+      <figure>
+        <img src="yoga-workshop_c.png" alt="Group of students sitting cross-legged on yoga mats meditating during a workshop" width="600">
+        <figcaption>Students practice seated meditation during our monthly Mindful Breathing workshop.</figcaption>
+      </figure>
+
+      <article>
+        <h3>Yoga Basics for Beginners</h3>
+        <p><strong>Date:</strong> <time datetime="2026-11-07">Saturday, November 7, 2026</time>, 10:00 AM to 12:00 PM</p>
+        <p>A relaxed introduction to basic poses, props, and breathing. Perfect if you have never taken a yoga class. <strong>Cost:</strong> $25</p>
+      </article>
+
+      <article>
+        <h3>Mindful Breathing and Stress Relief</h3>
+        <p><strong>Date:</strong> <time datetime="2026-12-05">Saturday, December 5, 2026</time>, 10:00 AM to 11:30 AM</p>
+        <p>Learn simple breathing and meditation tools you can use at work or at home. <strong>Cost:</strong> $25</p>
+      </article>
+
+      <article>
+        <h3>Chair Yoga for Healthy Aging</h3>
+        <p><strong>Date:</strong> <time datetime="2027-01-09">Saturday, January 9, 2027</time>, 10:00 AM to 11:30 AM</p>
+        <p>Gentle, supported movement to improve balance, mobility, and confidence for older adults. <strong>Cost:</strong> $20</p>
+      </article>
+    </section>
+
+    <section id="request-form">
+      <h2>Request a Spot</h2>
+      <p>Interested in a class or workshop? Fill out this form and we will contact you within two business days. Fields marked with an asterisk (*) are required.</p>
+
+      <form action="#" method="post">
+        <fieldset>
+          <legend>Your Contact Information</legend>
+
+          <label for="name">Full name *</label>
+          <input type="text" id="name" name="name" autocomplete="name" required minlength="2" maxlength="60">
+
+          <label for="email">Email address *</label>
+          <input type="email" id="email" name="email" autocomplete="email" required placeholder="name@example.com">
+
+          <label for="phone">Phone number (optional)</label>
+          <input type="tel" id="phone" name="phone" autocomplete="tel" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="225-555-0142" title="Use the format 225-555-0142">
+        </fieldset>
+
+        <fieldset>
+          <legend>Class or Event Interest</legend>
+
+          <label for="interest">Which class or event interests you? *</label>
+          <select id="interest" name="interest" required>
+            <option value="">Please choose one</option>
+            <option value="gentle">Gentle Flow</option>
+            <option value="vinyasa">Vinyasa</option>
+            <option value="restorative">Restorative</option>
+            <option value="chair">Chair Yoga</option>
+            <option value="express">Lunchtime Express Flow</option>
+            <option value="private">Private Session</option>
+            <option value="basics-workshop">Yoga Basics for Beginners Workshop</option>
+            <option value="breathing-workshop">Mindful Breathing Workshop</option>
+            <option value="chair-workshop">Chair Yoga for Healthy Aging Workshop</option>
+          </select>
+        </fieldset>
+
+        <fieldset>
+          <legend>Experience Level *</legend>
+          <input type="radio" id="level-new" name="experience" value="new" required>
+          <label for="level-new">Brand new to yoga</label>
+          <input type="radio" id="level-some" name="experience" value="some">
+          <label for="level-some">Some experience</label>
+          <input type="radio" id="level-regular" name="experience" value="regular">
+          <label for="level-regular">Practice regularly</label>
+        </fieldset>
+
+        <fieldset>
+          <legend>Preferred Contact Method *</legend>
+          <input type="radio" id="contact-email" name="contact-method" value="email" required>
+          <label for="contact-email">Email</label>
+          <input type="radio" id="contact-phone" name="contact-method" value="phone">
+          <label for="contact-phone">Phone call</label>
+          <input type="radio" id="contact-text" name="contact-method" value="text">
+          <label for="contact-text">Text message</label>
+        </fieldset>
+
+        <fieldset>
+          <legend>Your Message</legend>
+          <label for="message">Questions, goals, or accessibility needs *</label>
+          <textarea id="message" name="message" rows="5" cols="40" required minlength="10" maxlength="500"></textarea>
+        </fieldset>
+
+        <button type="submit">Request a Spot</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>Riverbend Yoga Studio &middot; 120 River Road &middot; <a href="tel:+12255550142">(225) 555-0142</a></p>
+    <p>&copy; 2026 Riverbend Yoga Studio. All rights reserved.</p>
+  </footer>
+</body>
+</html>
